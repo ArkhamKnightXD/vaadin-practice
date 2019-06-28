@@ -18,7 +18,5 @@ For more information on Vaadin Flow, visit https://vaadin.com/flow.
 
 Branching information:
 * `master` the latest version of the starter, using the latest platform snapshot
-* `v10` the version for Vaadin 10
-* `v11` the version for Vaadin 11
-* `v12` the version for Vaadin 12
-* `v13` the version for Vaadin 13
+* `V10` the version for Vaadin 10
+* `V11` the version for Vaadin 11

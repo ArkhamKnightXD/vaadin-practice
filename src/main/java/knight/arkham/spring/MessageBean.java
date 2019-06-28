@@ -1,4 +1,4 @@
-package knigh.arkham.vaadin.spring;
+package knight.arkham.spring;
 
 import java.time.LocalTime;
 import org.springframework.stereotype.Service;

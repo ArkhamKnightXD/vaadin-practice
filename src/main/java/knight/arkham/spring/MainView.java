@@ -1,4 +1,4 @@
-package knigh.arkham.vaadin.spring;
+package knight.arkham.spring;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.notification.Notification;
@@ -6,10 +6,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
-import com.vaadin.flow.server.PWA;
+
+//Esta es la ruta inicial por defecto de vaadin esto nos muestra un ejemplo de boton
+//que hace una accion, como la tuta no esta especificada asume la ruta inicial por defecto
 
 @Route
-@PWA(name = "Project Base for Vaadin Flow with Spring", shortName = "Project Base")
 public class MainView extends VerticalLayout {
 
     public MainView(@Autowired MessageBean bean) {
