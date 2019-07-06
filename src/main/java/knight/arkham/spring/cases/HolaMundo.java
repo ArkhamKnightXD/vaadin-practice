@@ -6,16 +6,13 @@ import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.router.Route;
 
-//Ejemplo de hola mundo en vaadin
 @Route("hola-mundo")
-//El extend es para indicar que la vista que mostraremos extiende de un panel verticual y asi
+//El extend es para indicar que la vista que mostraremos extiende de un panel vertical y asi
 // de esta forma los elementos que agreguemos se visualizaran uno debajo de otro
 public class HolaMundo extends VerticalLayout {
 
 
-    //Para trabajar con vaadin lo primero es hacer un constructuo vacio
-
-
+    //Para trabajar con vaadin lo primero es hacer un constructor vacio
     //Los elementos de vaadin se instancian como clases
     public HolaMundo() {
 

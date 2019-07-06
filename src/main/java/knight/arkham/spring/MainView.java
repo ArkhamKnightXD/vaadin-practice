@@ -1,13 +1,8 @@
 package knight.arkham.spring;
 
-import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
-import com.vaadin.flow.component.notification.Notification;
 import knight.arkham.spring.model.Customer;
-import knight.arkham.spring.repository.CustomerRepository;
 import knight.arkham.spring.services.CustomerServices;
-import org.springframework.beans.factory.annotation.Autowired;
-
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.router.Route;
 
@@ -27,10 +22,10 @@ public class MainView extends VerticalLayout {
     //Aqui especifico un grid que contendra objetos tipo customer
     final Grid<Customer> grid;
 
-    //Aqui pongo el constructor donde le mando el repository
+    //Dentro de los parentesis del constructor debo de agregar el repositorio o el servicio con el que estoy trabajando
     public MainView(CustomerServices customerServices) {
 
-        // Aqui especifico que utilizaremos el repositorio que se encuentra en esta clase
+        // Aqui especifico que utilizaremos el servicio que se encuentra en esta clase
         this.customerServices = customerServices;
         //Aqui inicializo el grid
         this.grid = new Grid<>(Customer.class);

@@ -1,0 +1,33 @@
+<!--En este lugar trabajo las hojas de estilos en vaadin y de esta forma es que debo trabajar
+ dentro de style utilizare codigo css de forma normal, se utiliza custom style es porque estamos trabajando con webcomponents-->
+<custom-style>
+
+    <style>
+
+        /*Abro un tag para darle estilo a cualquier pagina que tenga importada este archivo mediante html y aqui trabajo
+        con el estilo lumo que es un estilo nativo de vaadin*/
+        html{
+
+            /*Primero cambion la familia de letras*/
+            --lumo-font-family: Courier, monospace;
+
+            /*Aqui cambio los bordes para que las cosas tengan un aspecto mas redondo*/
+            --lumo-border-radius: 2em;
+
+            /*Aqui cambio el color de fondo y mas a bajo el color de algunas letras*/
+            --lumo-base-color: #fafbfc;
+            --lumo-primary-color: #00b4f0;
+        }
+
+        /*Aqui defino esta clase para darle estilo mas especificos a mi main view a la cual le defini esta clase al inicio de su constructor*/
+        .main-view{
+
+            box-shadow: .5em .5em .5em rgba(0,0,0,.3);
+            max-width: 900px;
+            background-color: #def;
+            margin: 2em;
+            padding: 2em;
+
+        }
+    </style>
+</custom-style>
