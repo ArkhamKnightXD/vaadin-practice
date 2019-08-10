@@ -30,6 +30,8 @@ public class EjemploVaadin2 extends VerticalLayout {
     //Y finalmente un boton
     private Button button = new Button("Guardar");
 
+    private Button buttonForDelete = new Button("Borrar");
+
 
     public EjemploVaadin2(ComentarioServices comentarioServices) {
 
@@ -66,9 +68,13 @@ public class EjemploVaadin2 extends VerticalLayout {
         //De esta forma puedo alinear el boton hacia la derecha en el layout
         // indicamos ahi aling.end que indica que se ira a la derecha, seguido del componente que quiero alinear
         setHorizontalComponentAlignment(Alignment.END,button);
+        setHorizontalComponentAlignment(Alignment.CENTER,buttonForDelete);
 
         //Aqui le indicamos al boton que haga este evento donde consigue lo que se comento en el text area y se lo manda al metodo guardar
         button.addClickListener(event -> guardar(textArea.getValue()));
+
+
+
 
         //Al final agregamos la imagen al vertical layout
         add(image,grid,textArea,button);
@@ -96,6 +102,12 @@ public class EjemploVaadin2 extends VerticalLayout {
     private void actualizar(){
 
         grid.setItems(comentarioServices.listAllComentarios());
+
+    }
+
+    private void eliminar(String contenido){
+
+        comentarioServices.deleteComentario(contenido);
 
     }
 }

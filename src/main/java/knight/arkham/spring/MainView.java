@@ -1,6 +1,10 @@
 package knight.arkham.spring;
 
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.grid.Grid;
+import com.vaadin.flow.component.html.H2;
+import com.vaadin.flow.router.RouterLink;
+import knight.arkham.spring.cases.HolaMundo;
 import knight.arkham.spring.model.Customer;
 import knight.arkham.spring.services.CustomerServices;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
@@ -32,12 +36,27 @@ public class MainView extends VerticalLayout {
 
         grid.setHeightByRows(true);
 
+        VerticalLayout caja = new VerticalLayout();
+
+        // De esta forma creo hipervinculos para acceder a las demas paginas
+        caja.add(new H2("Enlaces a las demas paginas:"));
+
+        //Routerlink sirve para agregar hipervinculos, aqui agrego dos hipervinculos, no importa donde esten ubicadas las clases
+        // con especificar el nomber.class es suficiente
+        caja.add(new RouterLink("Hola Mundo", HolaMundo.class));
+
+        caja.add(new RouterLink("Comentarios", EjemploVaadin2.class));
+
         //Aqui agrego el grid al verticallayout
-        add(grid);
+        add(grid, caja);
 
         // y por ultimo aqui agrego todos los customers  al grid
         grid.setItems(customerServices.listAllCustomers());
+
+
     }
+
+
 
 
 }

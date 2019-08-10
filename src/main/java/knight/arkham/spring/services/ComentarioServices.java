@@ -24,4 +24,12 @@ public class ComentarioServices {
 
         return comentarioRepository.findAll();
     }
+
+    public void deleteComentario(String contenido){
+
+        Comentario comentario= comentarioRepository.findComentarioByContenido(contenido);
+
+        comentarioRepository.delete(comentario);
+
+    }
 }
